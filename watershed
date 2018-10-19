@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+
+import numpy as np
+import pylab
+import mahotas as mh
+
+dna = mh.imread('dna.jpeg') #SANI: reading image using Mahotas module (dna is just a numpy (Numeric Python) array)
+
+#SANI: Apply watershed to the distance transform of the thresholded image
+#filterImage = mh.gaussian_filter(dna, 16)
+#T = mh.thresholding.otsu(filterImage)
+#dist = mh.distance(filterImage > T)
+#dist = dist.max() - dist
+#dist -= dist.min()
+#dist = dist/float(dist.ptp()) * 255
+#dist = dist.astype(np.uint8)
+#pylab.imshow(dist)
+#pylab.show()
