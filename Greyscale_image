@@ -8,11 +8,11 @@ dna = mh.imread('dna.jpeg') #SANI: reading image using Mahotas module (dna is ju
 
 
 #SANI: Show image in grey scall and get some info
-#pylab.imshow(dna)           #SANI: pylab module shows images as a heatmap image
-#pylab.gray()                #SANI: Change image to grey scale
-#pylab.show()                #SANIL Show image in output
+pylab.imshow(dna)           #SANI: pylab module shows images as a heatmap image
+pylab.gray()                #SANI: Change image to grey scale
+pylab.show()                #SANIL Show image in output
 
-#print(dna.shape)            #SANI: Show image width, height (Dimension)
-#print(dna.dtype)            #SANI: unsigned 8-bit integer
-#print(dna.max())
-#print(dna.min())
+print(dna.shape)            #SANI: Show image width, height (Dimension)
+print(dna.dtype)            #SANI: unsigned 8-bit integer
+print(dna.max())
+print(dna.min())
