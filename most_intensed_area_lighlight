@@ -7,7 +7,7 @@ import mahotas as mh
 dna = mh.imread('dna.jpeg') #SANI: reading image using Mahotas module (dna is just a numpy (Numeric Python) array)
 
 #SANI: Get most hilighted spots
-#filterImage = mh.gaussian_filter(dna, 16)
-#rmax = mh.regmax(filterImage)       #SANI: Getting maxima spots
-#pylab.imshow(mh.overlay(dna, rmax)) #SANI: mh.overlay returns a colour image with the grey level component being given by its first argument while overlaying its second argument as a red channel.
-#pylab.show()
+filterImage = mh.gaussian_filter(dna, 16)
+rmax = mh.regmax(filterImage)       #SANI: Getting maxima spots
+pylab.imshow(mh.overlay(dna, rmax)) #SANI: mh.overlay returns a colour image with the grey level component being given by its first argument while overlaying its second argument as a red channel.
+pylab.show()
