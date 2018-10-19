@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+
+
+import numpy as np
+import pylab
+import mahotas as mh
+
+dna = mh.imread('dna.jpeg') #SANI: reading image using Mahotas module (dna is just a numpy (Numeric Python) array)
+
+#SANI: Smooth the image a bit using a Gaussian filter.
+#filterImage = mh.gaussian_filter(dna, 8)
+#Threshholding = mh.thresholding.otsu(filterImage)
+#pylab.imshow(filterImage > Threshholding)
+#pylab.show()
