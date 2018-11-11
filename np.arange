@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+#SANI: et array list of ranged data
+#t = np.arange(10) #SANI: 0,1,...9 It would not include last point
+#t= np.arange(10.0)  #SANI: 0.,1.,...9. It would not include last point
+#t=np.arange(3,9) #SANI: start from 3 & end at less than 9 e.g (3,4,5,6,7,8)
+#t = np.arange(3,9,2) #SANI: start from 3 & end at less than 9 but add space of 2
+                      # 3, (3+2=5), (5+2=7), (7+2=9) 9 should be excluded.
+                      # so final output is 3,5,7
+                     
+t = np.arange(0,10,3) #SANI: output is 0,3,6,9                     
+
+print(t)
