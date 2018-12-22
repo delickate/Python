@@ -1,0 +1,21 @@
+#SANI: If you want to rotate an image on specific angel. 
+
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+img                = cv2.imread('nueral_network.jpg') #SANI: Read image
+num_rows, num_cols = img.shape[:2]     #SANI: Get image dimension 1024 X 786
+rotating_angel     = 90
+
+rotation_matrix = cv2.getRotationMatrix2D((num_cols/2, num_rows/2), rotating_angel, 1) #SANI: Change image into matrix form after rotate
+img_rotation    = cv2.warpAffine(img, rotation_matrix, (num_cols, num_rows)) #SANI: transforms the source image using the specified matrix
+
+#cv2.imshow('Rotation', img_rotation)
+#scv2.waitKey()
+
+plt.imshow(img_rotation[:,:,::-1]) #SANI change RGB-> BGR
+plt.show()
+
+
