@@ -1,0 +1,40 @@
+How to configure python with wampp server
+
+1) Install Python
+
+2) open c:\wamp64\bin\apache\apacheXXXX\conf\httpd.conf, 
+   then search for Options Indexes FollowSymLinks and add in the end:  ExecCGI (or  Includes ExecCGI)
+
+3) Find & ensure that LoadModule cgi_module is NOT commented.
+
+4) Search #AddHandler cgi-script .cgi and remove #. Then on next line add this:
+   AddHandler cgi-script .py
+
+5) Find the line: DirectoryIndex index.php index.php3 index.html index.htm
+   and add in the end of them: index.cgi index.py
+   Now, Restart Apache.
+
+6) create a index.py in c:\wampp64\www\python\index.py
+
+print("Content-type: text/html\n\n")
+print("Hello Sani Hyne")
+
+
+7) Restart WAMP.
+
+Open http://localhost:98/Python/test/ in browser
+
+p.s.note, in come cases, while using .htaccess [inside .py directory], you might need to insert these lines in .htaccess:
+Options +ExecCGI
+AddHandler cgi-script .py
+
+complete htaccess code is:
+
+# php_value     open_basedir  "/var/www/vhosts/:/tmp/"
+# Protect the htaccess file
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+Options +ExecCGI
+AddHandler cgi-script .py
