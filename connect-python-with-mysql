@@ -1,0 +1,99 @@
+#SANI: How to conenct python with mysql?
+
+
+Step 1: #SANI: Donwload mysql driver
+==================================================
+c:\> python -m pip install mysql-connector
+
+Step 2: #SANI: Inport mysql driver
+==================================================
+import mysql.connector
+
+Step 3: #SANI: Database connection
+==================================================
+pythondb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  passwd=""
+)
+
+Step 4: #SANI: Database connection object
+===================================================
+con = pythondb.cursor()
+
+Step 5: #SANI: Create databse
+==================================================
+con.execute("CREATE DATABASE pythondb")
+
+Step 6: #SANI: Execute query to get all database
+==================================================
+con.execute("SHOW DATABASES")
+
+#SANI: Loop through result
+============================
+for x in con:
+  print(x) 
+  
+ #SANI: Connect to specific database
+==========================================
+pythondb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  passwd=""
+  database="pythondb"
+)
+
+#SANI: Get all database tables
+=========================================
+con.execute("SHOW TABLES")
+
+#SANI: Insert record
+===============================
+sql = "INSERT INTO test (name, address) VALUES (%s, %s)"
+val = ("Sani", "Model Town")
+con.execute(sql, val)
+
+pythondb.commit()
+
+print(con.rowcount, "record inserted.")
+
+TO INSERT MULTI RECORD
+-----------------------
+sql = "INSERT INTO test (name, address) VALUES (%s, %s)"
+val = [
+      ('Sani', 'Model Town'),
+      ('Hyne', 'Settelite Town'),
+      ('Delickate', 'Iqbal Town')
+    ]
+con.execute(sql, val)
+pythondb.commit()
+
+
+#SANI: Update record
+===============================
+sql = "UPDATE test SET address = 'Garden Town' WHERE name = 'Sani'"
+con.execute(sql)
+pythondb.commit()
+print(con.rowcount, "record(s) affected") 
+
+#SANI: Delete record
+===============================
+sql = "DELETE FROM test WHERE name = 'Sani'"
+con.execute(sql)
+pythondb.commit()
+
+#SANI: Select record
+==============================
+con.execute("SELECT * FROM test")
+
+result = con.fetchall()
+
+for x in result:
+  print(x)
+  
+  
+
+
+
+
+
