@@ -1,0 +1,28 @@
+#SANI: Read a file backword. to do that install following library
+#pip install file-read-backwards
+from file_read_backwards import FileReadBackwards
+import nltk
+
+FileName = ("neural.txt") #SANI: Load file
+
+#print("Reading file start to end")
+#with open(FileName, 'r') as file:
+#    lines_in_file = file.readlines()
+    
+#for i in range(len(lines_in_file)):
+#    print("Line No- ",i)
+#    print(lines_in_file[i])
+    
+#print("read the file line backword. end to start")
+#with FileReadBackwards(FileName, encoding="utf-8") as BigFile:
+#    for line in BigFile:
+#        print(line)
+
+#print("read the file words backword. end to start")
+with FileReadBackwards(FileName, encoding="utf-8") as BigFile:
+    for line in BigFile:
+        word_data= line
+        nltk_tokens = nltk.word_tokenize(word_data)
+        nltk_tokens.reverse()
+        print (nltk_tokens)
+
