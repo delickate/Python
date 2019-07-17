@@ -1,0 +1,76 @@
+# DICTIONARY
+# A dictionary is a collection which is unordered, changeable and indexed.
+# In Python dictionaries are written with curly brackets, and they have keys and values.
+# just like associated array on PHP
+
+dictionary_array =  {
+  "0": "A",
+  "1": "B",
+  "2": 1980
+}
+# print(dictionary_array)
+
+#print array value using array index
+# print(dictionary_array["1"])
+# OR
+# print(dictionary_array.get("1"))
+
+# update array value using index
+# dictionary_array["2"] = 2019
+# print(dictionary_array)
+
+# Print all key names in the dictionary, one by one:
+# for i in dictionary_array:
+#   print(i)
+
+# Loop through array disctionary array
+# for i in dictionary_array:
+#     print(dictionary_array[i])
+# OR
+# for i in dictionary_array.values():
+#   print(i)
+
+# Loop through both keys and values, by using the items() function:
+# for array_index, array_value in dictionary_array.items():
+#   print(array_index, array_value)
+
+# check if array key/index exist
+# if "5" in dictionary_array:
+#  print("found")
+# else:
+#  print("not found")
+
+# get the length of an array
+# print(len(dictionary_array))
+
+# Adding item to dictionary array
+# dictionary_array["3"] = "D"
+# print(dictionary_array)
+
+# Removing item to dictionary array
+# dictionary_array.pop("3") OR del dictionary_array["3"]
+# print(dictionary_array) 
+
+# Remove last item in dictionary array
+# dictionary_array.popitem()
+# print(dictionary_array)
+
+# remove dictionary array permanentaly
+# del dictionary_array
+
+# empty the dictionary array
+# dictionary_array.clear()
+
+# copy array to other variable
+# new_array = dictionary_array.copy()
+# OR
+# new_array = dict(dictionary_array)
+# print(new_array)
+
+# we can also create dictionary array using keyword DICT (Also called constructor)
+# new_array = dict(X="A", Y="B", Z=1990)
+# print(new_array)
+
+
+
+
