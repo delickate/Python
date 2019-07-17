@@ -1,0 +1,14 @@
+#SANI: Remove duplicate words
+import nltk
+
+string_having_duplicate_word = "Hello! This is Sani Hyne. I am a computer programmer. Doing programming in python. This is my 7th program" 
+
+make_an_array_of_word = nltk.word_tokenize(string_having_duplicate_word)
+
+remove_duplicate = set(make_an_array_of_word)
+
+#print(remove_duplicate)
+
+make_a_list = list(remove_duplicate)
+
+print(make_a_list)
