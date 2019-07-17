@@ -1,0 +1,14 @@
+#install following library
+#pip install textwrap3
+
+import textwrap3
+
+file_path = ("neural.txt") #SANI: Load file
+
+file_data = open(file_path).readlines() #SANI: read file. It'll make array of each line
+file_data.sort() #SANI: Sort the data alphabatically
+
+#SANI: Loop through file data 
+for i in range(len(file_data)):
+   dedented_text = textwrap3.dedent(file_data[i]).strip()
+   print(dedented_text)
