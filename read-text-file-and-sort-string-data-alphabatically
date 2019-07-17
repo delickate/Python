@@ -1,0 +1,11 @@
+#SANI: Install natural language processing toolkit
+#pip install -U nltk
+
+file_path = ("neural.txt") #SANI: Load file
+
+file_data = open(file_path).readlines() #SANI: read file. It'll make array of each line
+file_data.sort() #SANI: Sort the data alphabatically
+
+#SANI: Loop through file data 
+for i in range(len(file_data)):
+   print(file_data[i])
