@@ -1,0 +1,41 @@
+# LIST
+# List is a collection which is ordered and changeable. Allows duplicate members.
+mylistarray = ["apple", "banana", "cherry"]
+
+print(mylistarray[2])
+
+mylistarray.append("guava")                   # append()    Adds an element at the end of the list 
+mylistarray.extend("grapes")                  #extend() Add each character seperately in a list
+mylistarray.pop(9)                            # pop()   Removes the element at the specified position
+mylistarray.remove("e")                       # remove()    Removes the item with the specified value
+mylistarray.sort() # sort()
+mylistarray.insert(0,"Sani")                  # insert()    Adds an element at the specified position
+
+index_of_value = mylistarray.index("banana")  # index() Returns the index of  specified value
+print(index_of_value)
+
+mylistarray.reverse()                         # reverse()   Reverses the order of the list
+print(mylistarray)
+
+
+total = mylistarray.count("Sani")             # count() Returns the number of elements with the specified value
+print(total)
+
+del mylistarray[8] #del removes the specified index:
+
+array_copy = mylistarray.copy()               # copy()  Returns a copy of the list
+print(array_copy)
+
+mylistarray.clear()                           # clear() Removes all the elements from the list
+print(mylistarray)
+
+# Loop Through a List
+for i in array_copy:
+  print(i)
+  
+#Check if Item Exists
+if "Sani" in array_copy:
+  print("Yes, Sani is there in a list array")
+
+#get array length
+print(len(array_copy))  
