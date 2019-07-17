@@ -1,6 +1,6 @@
 # LIST
 # List is a collection which is ordered and changeable. Allows duplicate members.
-mylistarray = ["apple", "banana", "cherry"]
+mylistarray = ["hyne", "delickate", "oops"]
 
 print(mylistarray[2])
 
