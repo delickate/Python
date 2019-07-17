@@ -1,0 +1,90 @@
+# SETS
+# A set is a collection which is unordered and unindexed.
+# In Python sets are written with curly brackets.
+
+sets_array = {"A", "B", "C"}
+# print(sets_array)
+
+sets_array.add("D") # Add single item to sets array
+
+sets_array.update(["E", "F", "G"]) # Add  multiple items to sets array
+
+sets_array.remove("G") # remove item by value. it returns error if not exist
+sets_array.discard("F") # remove item by value, it wont return error if not exist
+sets_array.pop() # remove last item
+
+# loop through sets array
+#for i in sets_array:
+#  print(i)
+ 
+# check if item exists 
+# if "B" in sets_array:
+#   print("Yes it is exist")
+   
+# new_sets_array = set(("X", "Y", "Z")) # sets array can also be created using keyword SET (also called constructor)
+# print(new_sets_array)
+
+# copy_of_array = new_sets_array.copy() # copy the array to other variable
+# print(copy_of_array)
+
+#find the difference in sets array
+array_one = {"a", "b", "c"}
+array_two = {"a", "d", "e"}
+print(array_one)
+print(array_two)
+
+# find the elements of array one does not exist in array two
+# find_difference = array_one.difference(array_two)
+# print(find_difference)
+
+#find the elements of array two does not exist in array one
+# find_difference = array_two.difference(array_one)
+# print(find_difference)
+
+# remove all the items of array one which are exists in array two
+# array_one.difference_update(array_two)
+# print(array_one)
+
+#show the items of array one which are exist in array two
+# similar_items = array_one.intersection(array_two)
+# print(similar_items)
+
+# remove all the items of array one which are not exists (similar) in array two
+# array_one.intersection_update(array_two)
+# print(array_one)
+
+# return true of any item of array one is does not exist in array two
+# or tell both array are different or not
+# disjoint = array_one.isdisjoint(array_two) 
+# print(disjoint)
+
+# return true of all item of array one are exists in array two
+# is_subset = array_one.issubset(array_two) 
+# print(is_subset)
+
+# inverse of issubset
+# is_superset = array_one.issuperset(array_two)
+# print(is_superset)
+
+# get all non-similar items of an array
+# not_similar = array_one.symmetric_difference(array_two)
+# print(not_similar)
+
+# Remove the items that are present in both sets, AND insert the items that is not present in both sets:
+# remove_similar = array_one.symmetric_difference_update(array_two)
+# print(remove_similar)
+
+# combine both array
+# combine_array = array_one.union(array_two)
+# print(combine_array)
+
+# Insert the items from set array_two into set array_one:
+array_one.update(array_two)
+print(array_one)
+
+# new_sets_array.clear() # empty the sets array
+
+# del new_sets_array # delete sets array permanentaly
+
+
+
