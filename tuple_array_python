@@ -1,0 +1,37 @@
+# TUPLE
+# A tuple is a collection which is ordered and unchangeable.
+# In Python tuples are written with round brackets.
+
+tuple_array = ("A", "B", "C")
+print(tuple_array)
+
+print(tuple_array[2])
+
+# tuple_array[3] = "D" # can not add Items to tuple
+# print(tuple_array)   # ERROR
+
+new_tuple = tuple(("X", "Y", "Z")) # tuple can create using keyword tuple (also called constructor)
+print(new_tuple)
+
+#Loop Through a Tuple
+for i in new_tuple:
+  print(i)
+  
+# Check if Item Exists
+if "Y" in new_tuple:
+  print("Yes, Y is exist in tuple")
+  
+print(len(new_tuple))   
+
+#how many time Y exist in an array
+total = new_tuple.count("Y")
+print(total)
+
+# get index of specific value
+index_of_value = new_tuple.index("Z")
+print(index_of_value)
+
+
+del new_tuple # delete the tuple completely
+
+
