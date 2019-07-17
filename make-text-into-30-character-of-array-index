@@ -1,0 +1,11 @@
+#SANI: To format a text we need following library
+# pip install textwrap3
+
+from textwrap3 import wrap #SANI: import wraper from library
+
+text = 'In late summer 1945, guests are gathered for the wedding reception of Don Vito Corleones daughter Connie (Talia Shire) and Carlo Rizzi (Gianni Russo). Vito (Marlon Brando), the head of the Corleone Mafia family, is known to friends and associates as Godfather. He and Tom Hagen (Robert Duvall), the Corleone family lawyer, are hearing requests for favors because, according to Italian tradition, no Sicilian can refuse a request on his daughters wedding day.'
+
+wrap_the_text_to_30_character = wrap(text, 30) #SANI: specify a width of 30 characters in each line for a paragraph
+
+for i in range(len(wrap_the_text_to_30_character)):
+    print(wrap_the_text_to_30_character[i])
