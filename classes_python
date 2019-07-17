@@ -1,0 +1,121 @@
+#CLASS
+# class with variable only
+#class ClassName:
+#  veriable_name = "Sani"
+
+#classObject = ClassName()
+#classObject.veriable_name = classObject.veriable_name+" Hyne"
+#print(classObject.veriable_name)
+
+##################################################
+
+#Class with one variable and one function. first param of all functions is must
+# and it has to be instance of class
+#class ClassName:
+#  veriable_name = "Sani"
+  
+#  def functionName(self): # first arguement for class instance is must
+#      print("Sani")
+
+#classObject = ClassName()
+
+#classObject.functionName()
+
+##################################################
+
+# class with constructor
+#class ClassName:
+#  veriable_name = "Sani"
+  
+#  def __init__(self):
+#    self.veriable_name = "Hyne"
+    
+#  def functionName(self): # first arguement for class instance is must
+#      return self.veriable_name
+
+#classObject = ClassName()
+
+#print(classObject.functionName())
+
+##################################################
+
+# class with arguments
+#class ClassName:
+#  veriable_name = "Sani"
+  
+#  def __init__(self,age): # a constructor
+#    self.veriable_name = "Hyne"
+#    self.age = age
+    
+#  def functionName(self): # first arguement for class instance is must
+#      return self.veriable_name
+    
+#  def agefunction(self):
+#      return self.age
+    
+#  def designation(self,designation_param):
+#      return designation_param
+
+#classObject = ClassName(22)
+
+#print(classObject.agefunction())
+#print(classObject.designation("Software engineer"))
+
+##################################################
+
+# INHERITANCE
+#class ClassName:
+#  veriable_name = "Sani"
+  
+#  def functionName(self): # first arguement for class instance is must
+#      return "Sani"
+
+#classObject = ClassName()
+#print(classObject.functionName())
+      
+
+#class ChildClassName(ClassName):
+#    pass   # if you do not want to add anything in class. just add PASS
+
+##################################################
+
+class ClassName:
+  veriable_name = "Sani"
+  
+  def functionName(self): # first arguement for class instance is must
+      return "Sani"
+
+classObject = ClassName()
+print(classObject.functionName())
+      
+
+class ChildClassName(ClassName):
+    def childFunction(self):
+        self.veriable_name = "Hyne"
+        return self.veriable_name
+
+
+child_object = ChildClassName()
+
+print(child_object.childFunction())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
