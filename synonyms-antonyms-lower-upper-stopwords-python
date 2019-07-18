@@ -1,0 +1,58 @@
+import string
+import nltk
+#nltk.download('stopwords') #SANI: Downloading ENGLISH stop words
+# nltk.download('wordnet') #SANI: Downloading all synonyms & antonyms words
+
+from nltk.corpus import stopwords #SANI: Import stopwords
+from nltk.corpus import wordnet   #SANI: import synonyms & antonyms words
+
+text = 'this is sani hyne. He is a computer programmer , He is working in PITB'
+
+#print(string.capwords(text))  #SANI: Make all first letter of words to upper case
+#print(text.upper()) #SANI: Make all letters to upper case
+
+#encryption_mechanism = str.maketrans('tpol', 'wxyz')
+#print(text.translate(encryption_mechanism)) #SANI: Encryption
+
+#sentenced_based_tokenized = nltk.sent_tokenize(text) #SANI: Sentence Tokenized string on the basis of comma, full-stop or question mark
+#print(sentenced_based_tokenized)
+
+#word_base_tokenized = nltk.word_tokenize(text) #SANI: Tokenize each word exist in string.
+#print(word_base_tokenized)
+
+# stopwords.words('english')
+#print(stopwords.words()) #SANI: Print all english stop words
+#PRINT(stopwords.fileids()) #SANI: Print all stopwords other than english
+
+#remove all stopwords
+#all_english_stopwords = set(stopwords.words('english'))
+#for word in word_base_tokenized: 
+#    if word not in all_english_stopwords:
+#        print(word)
+
+
+#GET Synonyms
+#synonyms = []
+
+#for syn in wordnet.synsets("Water"):
+#    for similarWord in syn.lemmas():
+#             synonyms.append(similarWord.name())
+#print(set(synonyms))
+
+
+#GET Antonyms
+#antonyms = []
+
+#for syn in wordnet.synsets("ahead"):
+#    for opositeWords in syn.lemmas():
+#        if opositeWords.antonyms():
+#            antonyms.append(opositeWords.antonyms()[0].name())
+
+#print(set(antonyms))
+
+
+
+
+
+
+
