@@ -1,0 +1,13 @@
+#pip install docx
+#pip install python-docx
+
+import docx
+
+def readtxt(filename):
+    doc = docx.Document(filename)
+    fullText = []
+    for para in doc.paragraphs:
+        fullText.append(para.text)
+    return '\n'.join(fullText)
+
+print (readtxt("api.docx"))
