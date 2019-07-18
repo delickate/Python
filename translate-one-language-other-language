@@ -1,0 +1,14 @@
+# SANI: Translate one language to other. First we need to install following package
+# pip install translate
+
+from translate import Translator
+
+
+translate_to_this_language = Translator(to_lang="German")           # SANI: In which language do you want to translate the text
+translated_my_text = translate_to_this_language.translate("Good Morning!") #SANI: Write language which you want to translate
+print(translated_my_text)
+
+#SANI: You can also specify this language should be translate to this language
+translator= Translator(from_lang="german",to_lang="spanish")
+translation = translator.translate("Guten Morgen")
+print translation
