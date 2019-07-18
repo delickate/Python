@@ -1,0 +1,12 @@
+import nltk
+# nltk.download('averaged_perceptron_tagger') #SANI: Downloading tagging.
+# nltk.download('tagsets') #SANI: Download tagging detail
+
+text = nltk.word_tokenize("This is Sani Hyne. I am a computer programming. Programming in python now a days.")
+tagged_text=nltk.pos_tag(text)
+print(tagged_text)
+
+# SANI: To check the tagging detail run following commands
+nltk.help.upenn_tagset('NN')
+nltk.help.upenn_tagset('IN')
+nltk.help.upenn_tagset('DT')
