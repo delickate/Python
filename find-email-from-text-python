@@ -1,0 +1,9 @@
+#SANI: Find email address from text
+import re
+text = "Please contact us at delickate@hotmail.com for further information."+\
+        " You can also give feedbacl at sani@hotmail.com"
+
+
+find_email = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", text)
+
+print(find_email)
