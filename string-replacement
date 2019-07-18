@@ -1,0 +1,14 @@
+import re
+
+#STRING REPLACEMENT
+text = "This is Sani Hyne. I am a computer programmer. I am working in PITB"
+#print (str.replace("am", "was"))   #SANI: Replace string
+#print (str.replace("am", "was", 1)) #SANI: Tells how many occurance should be replaced.
+
+sourceline  = re.compile("Hello", re.IGNORECASE) #SANI: Ignore this  from string.
+
+Replacedline  = sourceline.sub("Hello", "This is Sani Hyne. I am a computer programmer. I am working in PITB")
+print (Replacedline)
+
+
+
