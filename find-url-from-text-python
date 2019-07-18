@@ -1,0 +1,9 @@
+#SANI: Find URL from text
+import re
+text = "Please contact us at http://go4smart.com for further information."+\
+        " You can also give feedbacl at http://go4smart.com "
+
+
+find_email = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+', text)
+
+print(find_email)
