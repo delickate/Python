@@ -1,0 +1,42 @@
+# pip install matplotlib
+# pip install seaborn
+# pip install pandas
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+
+string_datetime = '2019-01-15 3:45pm'
+
+#print(pd.to_datetime(string_datetime)) #SANI: Covert string to datetime.
+
+#SANI: Reading CSV file
+opsd_daily = pd.read_csv('assets/opsd_germany_daily.csv', index_col=0, parse_dates=True)
+#print(opsd_daily.shape) #SANI: Output= (total_record, total_column)
+#print(opsd_daily.head(3)) #SANI: Get first three record from csv
+#print(opsd_daily.tail(3)) #SANI: Get the last three records from csv
+#print(opsd_daily.dtypes) #SANI: Checkout the data type of each column of csv file
+
+#opsd_daily = opsd_daily.set_index('Date') #SANI: Set the DataFrame’s index. It is similar to index_col=0 & parse_dates=true param above
+#print(opsd_daily.head(3))
+# print(opsd_daily.index) #SANI: To see indexed
+
+# Add columns with year, month, and weekday name
+#opsd_daily['Year'] = opsd_daily.index.year
+#opsd_daily['Month'] = opsd_daily.index.month
+#opsd_daily['Weekday Name'] = opsd_daily.index.weekday_name
+# Display a random sampling of 5 rows
+#print(opsd_daily.sample(5, random_state=0)) #SANI: Get 5 random record from csv file
+#print(opsd_daily.loc['2017-09-24']) #SANI: Get record of specific date
+#print(opsd_daily.loc['2014-01-20':'2014-01-22']) #SANI: Get record between two date range.
+#print(opsd_daily.loc['2012-02']) #SANI: Get record of specific month
+
+# Use seaborn style defaults and set the default figure size
+sns.set(rc={'figure.figsize':(11, 4)})
+#opsd_daily['Consumption'].plot(linewidth=0.5);
+
+cols_plot = ['Consumption', 'Solar', 'Wind']
+axes = opsd_daily[cols_plot].plot(marker='.', alpha=0.5, linestyle='None', figsize=(11, 9), subplots=True)
+for ax in axes:
+    ax.set_ylabel('Daily Totals (GWh)')
+
