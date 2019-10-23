@@ -1,0 +1,13 @@
+Step1:pip install mysql-python
+
+Step 2: PythonProject/testweb/testweb/setting.py
+DATABASES = {
+    'default': {  
+        #'ENGINE': 'django.db.backends.mysql',  
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'testdb',  
+        'USER':'root',  
+        'PASSWORD':'',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
