@@ -325,5 +325,22 @@ c:\wamp64\www\python\PROJECTNAME\myappname\templates\user_index.html
     </body>  
     </html>  
     
+    # Step 5: Add URLs
+    c:\wamp64\www\python\PROJECTNAME\myappname\urls.py
+    
+    #SANI: Roles
+    path('index/',views.index),
+    path('roleadd/',views.roleadd),
+    path('roleedit/<int:id>',views.roleedit),
+    path('roleupdate/<int:id>',views.roleupdate),
+    path('roledelete/<int:id>',views.roledelete),
+    #SANI: USers
+    path('users/',views.userlist),
+    path('useradd/',views.useradd),
+    path('useredit/<int:id>',views.useredit),
+    path('userupdate/<int:id>',views.userupdate),
+    path('userdelete/<int:id>',views.userdelete),
+    
+    
     
     That's all
