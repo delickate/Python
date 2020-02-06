@@ -1,0 +1,54 @@
+from pyimagesearch.shapedetector import ShapeDetector
+import argparse
+import imutils
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from skimage import io
+
+#gray_image = io.imread(r"C:\Users\OFFICE\Downloads\shapes.JPEG", as_gray=True)
+
+original_image = cv2.imread(r"C:\Users\OFFICE\Downloads\shapes.JPEG") #SANI: Original Image
+grayscale_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY) #SANI: Greyscale image
+edged_image = cv2.Canny(grayscale_image, 30, 200) #SANI: find edges of image
+contours, hierarchy = cv2.findContours(edged_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+
+resized = imutils.resize(original_image, width=300)
+ratio = original_image.shape[0] / float(resized.shape[0])
+
+print("Number of Contours found = " + str(len(contours))) 
+
+sd = ShapeDetector()
+
+# loop over the contours
+for c in contours:
+    # compute the center of the contour, then detect the name of the
+    # shape using only the contour
+    M = cv2.moments(c)
+    cX = int((M["m10"] / M["m00"]) * ratio)
+    cY = int((M["m01"] / M["m00"]) * ratio)
+    shape = sd.detect(c)
+    print(shape)
+
+    # multiply the contour (x, y)-coordinates by the resize ratio,
+    # then draw the contours and the name of the shape on the image
+    #c = c.astype("float")
+    #c *= ratio
+    #c = c.astype("int")
+    #cv2.drawContours(original_image, [c], -1, (0, 255, 0), 2)
+    #cv2.putText(original_image, shape, (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
+    # show the output image
+    #cv2.imshow("Image", original_image)
+    #cv2.waitKey(0)
+
+# Load an color image in grayscale
+#img = cv2.imread(r"C:\Users\OFFICE\Downloads\shapes.JPEG", CV_LOAD_IMAGE_GRAYSCALE)
+
+
+
+#cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+#cv2.imshow('image',edged)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
